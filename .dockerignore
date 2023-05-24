@@ -1,0 +1,6 @@
+.git/
+.devcontainer/
+docker/
+!docker/.npmrc
+node_modules/
+public/build/

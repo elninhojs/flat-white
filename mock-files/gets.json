@@ -1,0 +1,64 @@
+{
+    "/crazy-path/here?nice=ok": {
+        "response":{
+            "body":{
+                "Cool!":"yes"
+            },
+            "code":200,
+            "headers":{
+                "x-banana":"nanica",
+                "x-minions":"banana"
+            }
+        }
+    },
+    "/crazy-path/here?nice=nok": {
+        "response":{
+            "body":{
+                "Cool!":"not cool!"
+            },
+            "code":504
+        }
+    },
+    "/onemore/here/to/test/with/no/query": {
+        "response":{
+            "body":{
+                "Cool!":"querieless working fine"
+            },
+            "code":201
+        }
+    },
+    "/crazy-path/here": {
+        "conditions":[
+            {
+                "body.id===3 || body.id===1":{
+                    "response":{
+                        "body":{
+                            "yes":"man!"
+                        },
+                        "code":405
+                    }
+                }   
+            },
+            {
+                "body.id===2":{
+                    "response":{
+                        "body":{
+                            "super":"man!"
+                        },
+                        "code":200
+                    }   
+                }
+            },
+            {
+                "body.person.id===2":{
+                    "response":{
+                        "body":{
+                            "object":"noice"
+                        },
+                        "code":200
+                    }   
+                }
+            }
+        ]
+    }
+}
