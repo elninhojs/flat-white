@@ -1,6 +1,6 @@
 {
   "name": "flat-white-mock",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "main": "src/index.mjs",
   "scripts": {
     "start": "FW_PORT=8111 FW_DIR=./mock-files/ node src/index.mjs",
