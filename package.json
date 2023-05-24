@@ -1,9 +1,14 @@
 {
   "name": "flat-white-mock",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "src/index.mjs",
   "keywords": [
-    "mock", "http mock", "test", "e2e test", "graphql mock", "api mock"
+    "mock",
+    "http mock",
+    "test",
+    "e2e test",
+    "graphql mock",
+    "api mock"
   ],
   "scripts": {
     "start": "FW_PORT=8111 FW_DIR=./mock-files/ node src/index.mjs",
