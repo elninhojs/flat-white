@@ -89,13 +89,13 @@ If you are looking for something more advanced, you can use conditional response
 The first step is to have the dev dependency installed 
 
 ```sh
-npm i flat-white@latest
+npm i flat-white-mock@latest
 ```
 
 Than you have to inform your mock directory and if you wish a different port than 4321 you have to say that too.
 
 ```bash
-FW_PORT=9999 FW_DIR=./mock-directory-here/ node node_modules/flat-white 
+FW_PORT=9999 FW_DIR=./mock-directory-here/ node node_modules/flat-white-mock 
 ```
 
 Ideally, you will end up adding the command to your package.json. For instance:
@@ -103,7 +103,7 @@ Ideally, you will end up adding the command to your package.json. For instance:
 ```json
 "scripts": {
     "test":".....",
-    "start:mock": "FW_PORT=9999 FW_DIR=./mock-directory-here/ node node_modules/flat-white"
+    "start:mock": "FW_PORT=9999 FW_DIR=./mock-directory-here/ node node_modules/flat-white-mock"
     ...
   },
 ```
