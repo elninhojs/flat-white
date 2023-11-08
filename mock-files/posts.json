@@ -58,6 +58,14 @@
                         "code":200
                     }   
                 }
+            },
+            {
+                "body.person.id===123456":{
+                    "response":{
+                        "body":"file: person-body-response.json",
+                        "code":200
+                    }   
+                }
             }
         ]
     }
