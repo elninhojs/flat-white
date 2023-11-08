@@ -83,6 +83,26 @@ If you are looking for something more advanced, you can use conditional response
     }....
 
 ```
+### How to split your json files
+
+If you wish to split your json files, it is suported as a response attr the special string "file: filenamehere.json"
+
+```json
+...
+{
+                "body.id!==0 && body.id > 2 && body.id < 5":{
+                    "response":{
+                        "body":"file: yourjsonfile.json",
+                        "code":200,
+                        "headers":{
+                            "x-awesome":"bro"
+                        }
+                    }
+                }   
+            }
+```
+Inside your `yourjsonfile.json` you have to have a valid json and It will be responsed.
+
 
 ### How to use it in your projects
 

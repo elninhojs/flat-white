@@ -80,7 +80,12 @@ function processResponse(responseContent, req, res){
                 res.setHeader(hKey, headers[hKey])
             });
         }
-        res.status(code || 200).send(body || "");
+
+        if(typeof body === "string" && body.startsWith("file:")){
+            res.status(code || 200).send(fs.readFileSync(`${FW_DIR}${body.replace("file:", "").trim()}`))
+        }else{
+            res.status(code || 200).send(body || "");
+        }
     }else{
         res.status(404).send('Not found '+ req.originalUrl);
     }
